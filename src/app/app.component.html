@@ -1,0 +1,29 @@
+    <nav>
+      <span>
+
+        <a [routerLink]=" ['./dictionary'] ">
+          单词
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./translate'] ">
+          翻译
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./words-book'] ">
+          单词
+        </a>
+      </span>
+    </nav>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+
+    <footer>
+      @Google Translate
+    </footer>
