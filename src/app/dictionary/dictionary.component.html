@@ -1,9 +1,10 @@
-<p>Dictionary</p>
+
 <div class="row">
-  <input #box type="" class="btn btn-default" name="" value=""  (keyup.enter)=translateWord(box.value) >
+ <ngl-form-element label="" class="slds-m-top--small">
+  <input #box nglFormControl type="text" placeholder="请输入要查询的单词" [required]="required" (keyup.enter)="translateWord(box.value)">
+</ngl-form-element>
 </div>
-<ngl-form-checkbox label="Required" style="display: inline-block;">
-  <input nglFormControl type="checkbox" />
-</ngl-form-checkbox>
-<div></div>
-<button type="button" class="btn btn-danger">按钮</button>
+<div class="handler-field">
+  <button type="button" nglButton="brand" class="handler-btn" (click)="translateWord(box.value)">Translate</button>
+</div>
+

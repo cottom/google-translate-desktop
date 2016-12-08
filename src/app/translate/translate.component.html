@@ -1,2 +1,12 @@
-
-<p>Page 2 content</p>
+<ngl-form-element class="slds-m-top--small">
+  <textarea nglFormControl placeholder="输入要翻译的文字" [required]="required" class="tranlate-textarea" #box (keyup.enter)="translateWord(box.value)"></textarea>
+  <div class="btn-container">
+    <button type="button" nglButton="brand" class="handler-btn" (click)="translateWord(box.value)">Translate</button>
+  </div>
+  <div style="position:relative; height:6.25rem; z-index:0;" *ngIf="loading">
+    <ngl-spinner [size]="'large'" [type]="'brand'"></ngl-spinner>
+  </div>
+  <div class="slds-card" *ngIf="tranlatedText&&!loading">
+    {{tranlatedText}}
+  </div>
+</ngl-form-element>

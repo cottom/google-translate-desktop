@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-import {NglModule} from 'ng-lightning/ng-lightning';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { NglModule } from 'ng-lightning/ng-lightning';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core';
@@ -44,7 +44,6 @@ type StoreType = {
   ],
   imports: [ // import Angular's modules
     NglModule.forRoot(),
-    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,

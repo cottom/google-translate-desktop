@@ -9,6 +9,8 @@ export class DictionaryComponent {
   constructor(private translateService: GoogleTranslateApi) {
   }
   translateWord(text) {
-    this.translateService.translateZH2EN(text);
+    this.translateService.translateAuto(text).then(res => {
+      console.log(res);
+    });
   }
 }

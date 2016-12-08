@@ -8,6 +8,13 @@ export class GoogleTranslateApi {
     this._toENOption = {to: 'en'};
     this._toCNOption = {from: 'en', to: 'zh-cn'};
   }
+  translateAuto(words: string) {
+    if (/[A-Za-z]/.test(words)) {
+      return this.translateEN2ZH(words);
+    } else {
+      return this.translateZH2EN(words);
+    }
+  }
   translateZH2EN(words: String) {
     return this.translateCustom(words, this._toENOption);
   }
@@ -16,12 +23,9 @@ export class GoogleTranslateApi {
   }
 
   translateCustom(words: String, options: Object): Promise<any> {
-    // console.log(words);
     return translate(words, options).then(function(res: any){
       console.log(res);
       return res.text;
-    }, error => console.log(error)).catch(function(error: any){
-      console.error(error);
     });
   }
 };

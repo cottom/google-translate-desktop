@@ -1,3 +1,7 @@
-.btn {
-  background-color: #ddd;
+.handler-field  {
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.handler-btn {
+  float: right;
 }

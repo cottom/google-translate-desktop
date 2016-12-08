@@ -11,13 +11,12 @@ import '@angular/router';
 // RxJS
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
-
-// bootstrap
-import 'bootstrap/dist/css/bootstrap.css';
-import '@ng-bootstrap/ng-bootstrap';
-
-import 'normalize.css/normalize.css';
+import '@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css';
 import 'font-awesome/css/font-awesome.css';
+import 'ng-lightning';
+// bootstrap
+
+// import 'normalize.css/normalize.css';
 
 if ('production' === ENV) {
   // Production
