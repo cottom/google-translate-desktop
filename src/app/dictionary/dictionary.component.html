@@ -1,7 +1,7 @@
 
 <div class="row">
  <ngl-form-element label="" class="slds-m-top--small">
-  <input #box nglFormControl type="text" placeholder="请输入要查询的单词" [required]="required" (keyup.enter)="translateWord(box.value)">
+  <input #box nglFormControl type="text" maxlength="8" placeholder="请输入要查询的单词" [required]="required" (keyup.enter)="translateWord(box.value)">
 </ngl-form-element>
 </div>
 <div class="handler-field">

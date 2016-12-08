@@ -26,7 +26,12 @@ export class TranslateComponent {
       this.loading = false;
     }).catch((e) => {
       this.loading = false;
-      console.log(e.code);
+      let code = e.code;
+      if (e.code === 'BAD_REQUEST') {
+
+      } else {
+
+      }
     });
   }
  }
